@@ -6,26 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>On This Day</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/build.css">
   </head>
   <body>
     <div class="container">
-      <table class="table"></table>
+      <div class="row">
+        <div class="col-md-4 births">
+          <table>
+            <thead>
+              <tr>
+                <th>Births</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="col-md-4 events">
+          <table>
+            <thead>
+              <tr>
+                <th>Events</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="col-md-4 deaths">
+          <table>
+            <thead>
+              <tr>
+                <th>Deaths</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
     </div>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th></th>
-        <th>Event</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr></tr>
-      <tr></tr>
-      <tr></tr>
-    </tbody>
   </body>
-  <script src="js/xml2json.js"></script>
   <script src="lib/build.js"></script>
   <script src="js/main.js"></script>
 </html>

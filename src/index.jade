@@ -7,26 +7,27 @@ html(lang="en-US")
     block title
       title On This Day
     link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
     link(rel="stylesheet", href="lib/build.css")
   body
     .container
-      table.table
-    thead
-        tr
-          th Date
+      .row
+        .col-md-4.births
+          table
+            thead
+              tr: th Births
 
-          th
+        .col-md-4.events
+          table
+            thead
+              tr: th Events
 
-          th Event
+        .col-md-4.deaths
+          table
+            thead
+              tr: th Deaths
 
-      tbody
-        tr
 
-        tr
-
-        tr
-
-  script(src='js/xml2json.js')
   script(src="lib/build.js")
   script(src="js/main.js")
 
