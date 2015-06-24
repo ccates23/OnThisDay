@@ -6,4 +6,8 @@ body {
 .col-md-4 {
   color: white;
   border-style: solid;
-  border-width: 5px; }
+  border-width: 3px; }
+
+h1 {
+  text-align: center;
+  color: white; }
