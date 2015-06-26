@@ -2,14 +2,15 @@ var cors = 'http://crossorigin.me/';
 var date = new Date();
 var day = date.getDate();
 var month = date.getMonth() + 1;
-var API_URLlocation = 'http://api.wunderground.com/api/66d6d8486e5dfda0/geolookup/q/'
-var API_URLweather = 'http://api.wunderground.com/api/66d6d8486e5dfda0/forecast10day/q/37201.json';
+var API_URLlocation = 'http://api.wunderground.com/api/66d6d8486e5dfda0/geolookup/q/';
+var API_URLweather = 'http://api.wunderground.com/api/66d6d8486e5dfda0/forecast10day/q/';
 var API_URLevents = 'http://www.api.hiztory.org/events/' + month + '/' + day + '/1/15/api.xml';
 var API_URLbirths = 'http://www.api.hiztory.org/births/' + month + '/' + day + '/1/15/api.xml';
 var API_URLdeaths = 'http://www.api.hiztory.org/deaths/' + month + '/' + day + '/1/15/api.xml';
 var births = [];
 var deaths = [];
 var events = [];
+var zip;
 
 $.get(cors + API_URLevents, function(res){
 	var xml = $.parseXML(res);
@@ -67,33 +68,39 @@ $.get(cors + API_URLdeaths, function(res){
                 });
             });
 
-// var button = document.querySelector('button');
 
-// button.onclick = function () {
-//   var input = document.querySelector('input');
-//   var image = document.querySelector('img');
-//   var zipcode = input.value;
+navigator.geolocation.getCurrentPosition(function(geoposition) {
+	var lat = geoposition.coords.latitude;
+	var long = geoposition.coords.longitude;
+	$.get(API_URLlocation + lat + ',' + long + '.json', function(location) {
+	  zip = location.location.zip;
+	  console.log(zip);
+getWeather(zip);
+   })
 
-// navigator.geolocation.getCurrentPosition(function(geoposition) {
-//   	  var lat = geoposition.coords.latitude;
-//   	  var long = geoposition.coords.longitude;
-//   	  console.log(geoposition);
+});
 
-   $.get(API_URLweather, function (data) {
-        for( var i = 0 ; i < 7; i++){
-      	var imageUrl = data.forecast.simpleforecast.forecastday[i].icon_url;
-        var high = data.forecast.simpleforecast.forecastday[i].high.fahrenheit;
-        var low = data.forecast.simpleforecast.forecastday[i].low.fahrenheit;
-        var weekday = data.forecast.simpleforecast.forecastday[i].date.weekday;
-        var imgtag = document.createElement('img');
+function getWeather(zip) {
 
-        imgtag.id = 'weathericon';
-        imgtag.src = imageUrl;
-        $('.weather').append('<td>'+ high + '/' + low + ' ' + weekday + '</td>');
-        $('.weather').append( imgtag );
-      
-    }
-   });
+
+$.get(API_URLweather + zip + '.json', function (data) {
+	console.log(API_URLweather + zip + '.json')
+	console.log(data);
+
+    for( var i = 0 ; i < 7; i++){
+  	var imageUrl = data.forecast.simpleforecast.forecastday[i].icon_url;
+    var high = data.forecast.simpleforecast.forecastday[i].high.fahrenheit;
+    var low = data.forecast.simpleforecast.forecastday[i].low.fahrenheit;
+    var weekday = data.forecast.simpleforecast.forecastday[i].date.weekday;
+    var imgtag = document.createElement('img');
+    imgtag.id = 'weathericon';
+    imgtag.src = imageUrl;
+    $('.weather').append('<td>'+ high + '/' + low + ' ' + weekday + '</td>');
+    $('.weather').append( imgtag );
+ }
+
+});
+};
 
 
 
