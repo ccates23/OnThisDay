@@ -1,5 +1,5 @@
 body{
-    background-image: url("https://ununsplash.imgix.net/15/castle.JPG?fit=crop&fm=jpg&h=700&q=75&w=1050");
+    background-image: url("https://unsplash.imgix.net/photo-1430760814266-9c81759e5e55?fit=crop&fm=jpg&h=750&q=75&w=1050");
     background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -8,10 +8,56 @@ body{
 	color: white;
 	border-style: solid;
 	border-width: 3px;
+	background: #7f7f7f;
+	background: rgba(0,0,0,0.5);
 }
 
-h1 {
+body h1 {
+    color: white;
 	text-align: center;
-	color: white;
+	text-shadow: 2px 2px 4px #000000;
+	font-size: 70px;
+	
 }
+
+.forecast {
+	color: white;
+	border-style: solid;
+	border-width: 3px;
+	background: #7f7f7f;
+	background: rgba(0,0,0,0.5);
+	font-size: 16px;
+
+}
+
+.births {
+	text-align: center;
+	background: #7f7f7f;
+	background: rgba(0,0,0,0.5);
+	font-size: 16px;
+}
+.events {
+	text-align: center;
+	background: #7f7f7f;
+	background: rgba(0,0,0,0.5);
+	font-size: 16px;
+
+}
+.deaths {
+	text-align: center;
+	background: #7f7f7f;
+	background: rgba(0,0,0,0.5);
+	font-size: 16px;
+
+}
+
+.tableheader {
+    text-align: center;
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+
+
+
 

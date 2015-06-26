@@ -13,30 +13,28 @@ html(lang="en-US")
     h1 On This Day
     .container
       .row
-        .col-md-4.births
+        .col-md-12.forecast
           table
             thead
-              tr: th Births
-
-        .col-md-4.events
-          table
-            thead
-              tr: th Events
-
-        .col-md-4.deaths
-          table
-            thead
-              tr: th Deaths
-
-      .row
-        .col-md-8.forecast
-          table
-            thead
-              tr: th Weekly Forecast
                 tbody
                   tr.weather
+      .row
+        .col-md-4
+          p.tableheader Births
+          table.births
+
+        .col-md-4
+          p.tableheader Events
+          table.events
+
+
+        .col-md-4
+          p.tableheader Deaths
+          table.deaths
+
       
-        .col-md-4.current Current Temperature
+
+
 
 
   script(src="lib/build.js")

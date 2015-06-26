@@ -13,49 +13,29 @@
     <h1>On This Day</h1>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 births">
+        <div class="col-md-12 forecast">
           <table>
             <thead>
-              <tr>
-                <th>Births</th>
-              </tr>
-            </thead>
-          </table>
-        </div>
-        <div class="col-md-4 events">
-          <table>
-            <thead>
-              <tr>
-                <th>Events</th>
-              </tr>
-            </thead>
-          </table>
-        </div>
-        <div class="col-md-4 deaths">
-          <table>
-            <thead>
-              <tr>
-                <th>Deaths</th>
-              </tr>
+              <tbody>
+                <tr class="weather"></tr>
+              </tbody>
             </thead>
           </table>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-8 forecast">
-          <table>
-            <thead>
-              <tr>
-                <th>Weekly Forecast
-                  <tbody>
-                    <tr class="weather"></tr>
-                  </tbody>
-                </th>
-              </tr>
-            </thead>
-          </table>
+        <div class="col-md-4">
+          <p class="tableheader">Births</p>
+          <table class="births"></table>
         </div>
-        <div class="col-md-4 current">Current Temperature</div>
+        <div class="col-md-4">
+          <p class="tableheader">Events</p>
+          <table class="events"></table>
+        </div>
+        <div class="col-md-4">
+          <p class="tableheader">Deaths</p>
+          <table class="deaths"></table>
+        </div>
       </div>
     </div>
   </body>

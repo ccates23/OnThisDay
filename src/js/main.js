@@ -2,6 +2,7 @@ var cors = 'http://crossorigin.me/';
 var date = new Date();
 var day = date.getDate();
 var month = date.getMonth() + 1;
+var API_URLlocation = 'http://api.wunderground.com/api/66d6d8486e5dfda0/geolookup/q/'
 var API_URLweather = 'http://api.wunderground.com/api/66d6d8486e5dfda0/forecast10day/q/37201.json';
 var API_URLevents = 'http://www.api.hiztory.org/events/' + month + '/' + day + '/1/15/api.xml';
 var API_URLbirths = 'http://www.api.hiztory.org/births/' + month + '/' + day + '/1/15/api.xml';
@@ -73,7 +74,10 @@ $.get(cors + API_URLdeaths, function(res){
 //   var image = document.querySelector('img');
 //   var zipcode = input.value;
 
-
+// navigator.geolocation.getCurrentPosition(function(geoposition) {
+//   	  var lat = geoposition.coords.latitude;
+//   	  var long = geoposition.coords.longitude;
+//   	  console.log(geoposition);
 
    $.get(API_URLweather, function (data) {
         for( var i = 0 ; i < 7; i++){
@@ -85,9 +89,8 @@ $.get(cors + API_URLdeaths, function(res){
 
         imgtag.id = 'weathericon';
         imgtag.src = imageUrl;
-        console.log(imgtag);
-        // var image = document.getElementById('weathericon').appendChild(imgtag);
         $('.weather').append('<td>'+ high + '/' + low + ' ' + weekday + '</td>');
+        $('.weather').append( imgtag );
       
     }
    });
