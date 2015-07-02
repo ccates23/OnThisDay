@@ -35,7 +35,8 @@ body h1 {
   text-align: center;
   background: #7f7f7f;
   background: rgba(0, 0, 0, 0.5);
-  font-size: 16px; }
+  font-size: 16px;
+  height: 1202px; }
 
 .deaths {
   text-align: center;
@@ -59,6 +60,30 @@ body h1 {
   background-position: center;
   background-repeat: no-repeat; }
 
-.ad img {
-  padding-top: 12px;
-  padding-left: 150px; }
+.nss {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80px;
+  width: 800px;
+  padding-top: 15px;
+  padding-left: 18px; }
+
+.wiki {
+  padding-top: 13px;
+  padding-left: 25px;
+  padding-right: 14px;
+  height: 80px;
+  width: 140px; }
+
+.ciber {
+  height: 80px;
+  width: 100px;
+  padding-top: 10px;
+  padding-left: 1px; }
+
+.twitter {
+  height: 80px;
+  width: 100px;
+  padding-top: 11px;
+  padding-left: 11px; }
