@@ -32,7 +32,6 @@ $.get(cors + API_URLevents, function(res){
             });
 
 $.get(cors + API_URLbirths, function(res){
-	
 	var xml = $.parseXML(res);
     $(xml).find('event').each(function () {
     	births.push({
@@ -50,7 +49,6 @@ $.get(cors + API_URLbirths, function(res){
             });
 
 $.get(cors + API_URLdeaths, function(res){
-	
 	var xml = $.parseXML(res);
     $(xml).find('event').each(function () {
     	deaths.push({
@@ -81,12 +79,7 @@ getWeather(zip);
 });
 
 function getWeather(zip) {
-
-
 $.get(API_URLweather + zip + '.json', function (data) {
-	console.log(API_URLweather + zip + '.json')
-	console.log(data);
-
     for( var i = 0 ; i < 7; i++){
   	var imageUrl = data.forecast.simpleforecast.forecastday[i].icon_url;
     var high = data.forecast.simpleforecast.forecastday[i].high.fahrenheit;
