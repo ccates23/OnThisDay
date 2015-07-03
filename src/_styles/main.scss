@@ -10,15 +10,20 @@ body{
 	border-width: 3px;
 	background: #7f7f7f;
 	background: rgba(0,0,0,0.5);
-	max-height: 1246px;
+	
 }
 
 body h1 {
     color: white;
 	text-align: center;
 	text-shadow: 2px 2px 4px #000000;
+	font-family: 'Philosopher', sans-serif;
 	font-size: 70px;
-	
+}
+
+body h4 {
+	color: white;
+	text-align: center;
 }
 
 .forecast {
@@ -28,7 +33,6 @@ body h1 {
 	background: #7f7f7f;
 	background: rgba(0,0,0,0.5);
 	font-size: 16px;
-
 }
 
 .births {
@@ -42,8 +46,6 @@ body h1 {
 	background: #7f7f7f;
 	background: rgba(0,0,0,0.5);
 	font-size: 16px;
-	height: 1202px;
-
 }
 .deaths {
 	text-align: center;
@@ -67,9 +69,8 @@ width:1170px;
 height:100px;
 margin-left: auto;
 margin-right: auto;
-background-position: center;
-background-repeat: no-repeat;
-
+background: #7f7f7f;
+background: rgba(0,0,0,0.5);
 }
 .nss {
 	display: inline-block;
