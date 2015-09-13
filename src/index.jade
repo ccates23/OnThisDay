@@ -9,10 +9,11 @@ html(lang="en-US")
     link(rel="stylesheet", href="css/main.css")
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
     link(href='http://fonts.googleapis.com/css?family=Philosopher', rel='stylesheet', type='text/css')
+    link(href='Map_compass.png', rel='icon', type='image/x-icon')
     link(rel="stylesheet", href="lib/build.css")
   body
     h1 On - This - Day
-    h4 Seven Day Forecast
+    h4 Your Local Forecast
     .container
       .row
         .col-md-12.forecast
@@ -22,28 +23,26 @@ html(lang="en-US")
                   tr.weather
       .row
         .col-md-4
-          p.tableheader Births
+          p.tableheader Births:
           table.births
 
         .col-md-4
-          p.tableheader Events
+          p.tableheader Events:
           table.events
 
         .col-md-4
-          p.tableheader Deaths
+          p.tableheader Deaths:
           table.deaths
 
 
 
-     
-
-     footer.ad
+    footer.ad
       a(href='http://www.nashvillesoftwareschool.com')
        image.nss(src='http://tinyurl.com/oqlwy4l')
       a(href='https://en.wikipedia.org/wiki/Portal:History')
        image.wiki(src='http://tinyurl.com/nt4jqk8')
-      a(href='http://www.ciber.com')
-       image.ciber(src='http://tinyurl.com/nvld9q6')
+      a(href='http://www.facebook.com')
+       image.facebook(src='http://tinyurl.com/ofdd3l8')
       a(href='http://www.twitter.com')
        image.twitter(src='http://tinyurl.com/nw6zqvp')
 
@@ -51,4 +50,5 @@ html(lang="en-US")
 
   script(src="lib/build.js")
   script(src="js/main.js")
+
 

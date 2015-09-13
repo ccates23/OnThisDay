@@ -1,2 +1,4 @@
 # OnThisDay
-Capstone App
+Capstone App (Nashville Software School)
+
+This was my front end capstone for the Nashville Software School. It was built using HTML5, CSS and JavaScript. I also used the JavaScript library jQuery and the CSS framework Bootstrap. On This Day is a app that gives different events in history that occured on the current day. It makes an api call to This Day in Hiztory.org. There is also a 7 day forecast at the top of the page that will give you the current forecast based on your geolocation. This also makes an api call to Wunderground.com. In version 2.0 I would like to have the ability to add more pages to the history tables. Currently it only gives 15 results daily in three different categories. There are events, births and deaths. Also, I would like to find a different api because this one doesn't have anything that goes beyond the year 1996. I hope you enjoy it. Thanks!

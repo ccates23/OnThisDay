@@ -14,7 +14,7 @@ var zip;
 
 $.get(cors + API_URLevents, function(res){
 	var xml = $.parseXML(res);
-    $(xml).find('event').each(function () {
+    $(res).find('event').each(function () {
     	events.push({
     		date: $(this).attr('date'),
     		content: $(this).attr('content')
@@ -33,7 +33,7 @@ $.get(cors + API_URLevents, function(res){
 
 $.get(cors + API_URLbirths, function(res){
 	var xml = $.parseXML(res);
-    $(xml).find('event').each(function () {
+    $(res).find('event').each(function () {
     	births.push({
     		date: $(this).attr('date'),
     		content: $(this).attr('content')
@@ -50,7 +50,7 @@ $.get(cors + API_URLbirths, function(res){
 
 $.get(cors + API_URLdeaths, function(res){
 	var xml = $.parseXML(res);
-    $(xml).find('event').each(function () {
+    $(res).find('event').each(function () {
     	deaths.push({
     		date: $(this).attr('date'),
     		content: $(this).attr('content')
@@ -72,7 +72,6 @@ navigator.geolocation.getCurrentPosition(function(geoposition) {
 	var long = geoposition.coords.longitude;
 	$.get(API_URLlocation + lat + ',' + long + '.json', function(location) {
 	  zip = location.location.zip;
-	  console.log(zip);
 getWeather(zip);
    })
 
@@ -88,12 +87,13 @@ $.get(API_URLweather + zip + '.json', function (data) {
     var imgtag = document.createElement('img');
     imgtag.id = 'weathericon';
     imgtag.src = imageUrl;
-    $('.weather').append('<td>'+ high + '/' + low + ' ' + weekday + '</td>');
+    $('.weather').append('<td>'+  weekday + ' ' + high + '/' + low  + '</td>');
     $('.weather').append( imgtag );
  }
 
 });
 };
+
 
 
 
